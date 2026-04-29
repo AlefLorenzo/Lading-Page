@@ -15,8 +15,9 @@ export default function About() {
         {/* Container do grid de 4 quadrantes */}
         <div className={styles.grid}>
           {/* Quadrante 1: Imagem da Loja */}
+          {/* A div precisa ter position: relative e tamanho definido para o fill funcionar */}
           <div className={styles.imageBox}>
-            <Image src="/loja.png" alt="Interior da Ótica" layout="fill" objectFit="cover" />
+            <Image src="/loja.png" alt="Interior da Ótica" fill style={{ objectFit: 'cover' }} />
           </div>
 
           {/* Quadrante 2: Texto Filiais */}
@@ -33,7 +34,7 @@ export default function About() {
 
           {/* Quadrante 4: Imagem Atendimento */}
           <div className={styles.imageBox}>
-            <Image src="/atendimento.png" alt="Atendimento ao cliente" layout="fill" objectFit="cover" />
+            <Image src="/atendimento.png" alt="Atendimento ao cliente" fill style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </div>
