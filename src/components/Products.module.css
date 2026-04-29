@@ -1,0 +1,86 @@
+.products {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  /* Cria um grid de 2 colunas para telas médias/grandes */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #f5f5f5;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efeito hover para subir o card um pouco */
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.benefits {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.benefits p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.benefits ul {
+  list-style: none; /* Remove as bolinhas da lista */
+  display: inline-block;
+  text-align: left;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Responsividade: para telas de celulares, o grid vira 1 coluna */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

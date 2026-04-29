@@ -1,0 +1,42 @@
+.header {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o menu */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Espaça logo e menu aos extremos */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px; /* Espaço entre os links */
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.nav a:hover {
+  color: #888; /* Muda cor ao passar o mouse */
+}
+
+/* Responsividade: para telas menores que 768px */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empilha logo e menu */
+    gap: 20px;
+  }
+}

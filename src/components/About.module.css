@@ -1,0 +1,68 @@
+.about {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  /* Grid de 2 colunas para o layout quadriculado */
+  grid-template-columns: 1fr 1fr;
+  /* A altura das linhas é fixa para alinhar imagem com o texto lado a lado perfeitamente */
+  grid-auto-rows: 300px;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.textBox {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.textBox h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.textBox p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Responsividade: em telas pequenas, transformar em coluna única */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  
+  /* Para manter o fluxo lógico no mobile (texto 1, imagem 1, texto 2, imagem 2)
+     Podemos ajustar a ordem via flex/grid order, mas o padrão HTML também funciona */
+}
